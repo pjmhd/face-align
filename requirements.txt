@@ -1,4 +1,4 @@
-opencv-python==4.3.0.38
+opencv-python
 dlib-binary==19.21.99
 imutils==0.5.4
 numpy==1.22.0
