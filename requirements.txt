@@ -1,8 +1,9 @@
+python==3.6.7
 dlib==19.7.0
 numpy==1.19.3
 scipy
 scikit-image
 imutils==0.5.3
 opencv-python==4.1.0.25
-Flask==2.0.2
+flask==2.0.2
 Werkzeug==2.0.2
