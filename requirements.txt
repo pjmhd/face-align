@@ -1,5 +1,5 @@
 opencv-python
-dlib-binary==19.21.99 -zzz
+dlib-binary==19.21.99
 imutils==0.5.4
 numpy==1.22.0
 Flask==2.0.2
