@@ -1,4 +1,4 @@
-opencv-python
+opencv-python-headless
 dlib-binary==19.21.99
 imutils==0.5.4
 numpy==1.19.3
