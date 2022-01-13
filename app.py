@@ -32,9 +32,9 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['MAX_CONTENT_PATH'] = 20000000
 
-# @app.route('/upload')
-# def upload_file():
-#     return render_template('upload.html')
+@app.route('/')
+def hello():
+    return 'Your Server is up and Runing'
 
 
 @app.route('/uploader', methods=['GET', 'POST'])
