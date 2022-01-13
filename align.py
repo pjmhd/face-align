@@ -6,7 +6,7 @@ import dlib
 import cv2
 import numpy as np
 
-def detect_image(image, output='uploads/output', zoom_factor=0.40, aspect_ratio='35:45', shape_predictor="shape_predictor_68_face_landmarks.dat", 
+def detect_image(image, zoom_factor=0.40, aspect_ratio='35:45', output='uploads/output', shape_predictor="shape_predictor_68_face_landmarks.dat", 
                  pixel_size=1800, ):
     # args = vars(ap.parse_args())
     zoom_factor = float(zoom_factor)
