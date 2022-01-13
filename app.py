@@ -34,7 +34,7 @@ app.config['MAX_CONTENT_PATH'] = 20000000
 
 @app.route('/')
 def hello():
-    return 'Your server is up and running'
+    return 'The server is up and running'
 
 
 @app.route('/uploader', methods=['GET', 'POST'])
