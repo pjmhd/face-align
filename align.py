@@ -1,35 +1,13 @@
-﻿# USAGE
-# python align_faces.py --image images/example_01.jpg --output test
-
-
 # import the necessary packages
 from imutils.face_utils import FaceAligner
 from imutils.face_utils import rect_to_bb
-# import argparse
 import imutils
 import dlib
 import cv2
 import numpy as np
 
-
-# construct the argument parser and parse the arguments
-# ap = argparse.ArgumentParser()
-# ap.add_argument("-p", "--shape-predictor", required=False,
-#                 default="shape_predictor_68_face_landmarks.dat",
-#                 help="path to facial landmark predictor")
-# ap.add_argument("-i", "--image", required=True,
-#                 help="path to input image")
-# ap.add_argument("-a", "--aspectRatio", required=False, default="35:45",
-#                 help="aspect ratio of aligned output image")
-# ap.add_argument("-s", "--pixel_size", required=False, default=1800,
-#                 help="image pixel size")
-# ap.add_argument("-z", "--zoom_factor", required=False, default=0.40,
-#                 help="amount of zoom, value between 0.35 and 0.5. Default 0.40")
-# ap.add_argument("-o", "--output", required=False,
-#                 help="output name of the file")
-
-def detect_image(image, output='uploads/output', shape_predictor="shape_predictor_68_face_landmarks.dat", aspect_ratio='35:45',
-                 pixel_size=1800, zoom_factor=0.40, ):
+def detect_image(image, output='uploads/output', zoom_factor=0.40, aspect_ratio='35:45', shape_predictor="shape_predictor_68_face_landmarks.dat", 
+                 pixel_size=1800, ):
     # args = vars(ap.parse_args())
     zoom_factor = float(zoom_factor)
     pixel_size = int(pixel_size)
