@@ -34,7 +34,7 @@ app.config['MAX_CONTENT_PATH'] = 20000000
 
 @app.route('/')
 def hello():
-    return 'The server is up and running'
+    return 'The server is up and running 1.2'
 
 
 @app.route('/uploader', methods=['GET', 'POST'])
@@ -42,8 +42,8 @@ def upload_file():
     if request.method == 'POST':
         f = request.files['file']
         f.save('uploads/'+secure_filename(f.filename))
-        zoom = request.files['zoom']
-        aspect = request.files['aspect']
+        zoom = request.form.get('zoom')
+        aspect =request.form.get('aspect')
         # img = cv2.imread(secure_filename(f.filename))
         # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         # faces = face_cascade.detectMultiScale(gray, 1.1, 4)
