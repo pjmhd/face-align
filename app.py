@@ -42,6 +42,8 @@ def upload_file():
     if request.method == 'POST':
         f = request.files['file']
         f.save('uploads/'+secure_filename(f.filename))
+        zoom = request.files['zoom']
+        aspect = request.files['aspect']
         # img = cv2.imread(secure_filename(f.filename))
         # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         # faces = face_cascade.detectMultiScale(gray, 1.1, 4)
@@ -51,11 +53,10 @@ def upload_file():
         #     # cv2.imshow("face",faces)
         #     cv2.imwrite('face.jpg', faces)
         # cv2.imwrite('detcted.jpg', img)
-        detect_image('uploads/'+secure_filename(f.filename))
+        detect_image('uploads/'+secure_filename(f.filename), zoom, aspect)
         # cv2.imshow('img', img)
         return send_file('uploads/output.JPG', mimetype='image/jpeg')
         # return 'file uploaded successfully'
-
 
 if __name__ == '__main__':
     app.run(debug=True)
