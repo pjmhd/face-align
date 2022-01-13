@@ -28,7 +28,7 @@ import numpy as np
 # ap.add_argument("-o", "--output", required=False,
 #                 help="output name of the file")
 
-def detect_image(image, output='output', shape_predictor="shape_predictor_68_face_landmarks.dat", aspect_ratio='35:45',
+def detect_image(image, output='uploads/output', shape_predictor="shape_predictor_68_face_landmarks.dat", aspect_ratio='35:45',
                  pixel_size=1800, zoom_factor=0.40, ):
     # args = vars(ap.parse_args())
     zoom_factor = float(zoom_factor)
